@@ -8,12 +8,23 @@ body {
 	width: 100%;
 }
 
+#screen {
+	border: 1px solid yellow;
+	width: 80%;
+}
+
 .column, .outercolumn {
 	border: 1px solid pink;
 	display: inline-block;
+	width: 16.66%;
 }
 
 .seats {
 	border: 1px solid green;
 	display: block;
+	width: 100%;
+}
+
+.seatnumber {
+	color: white;
 }
