@@ -1,0 +1,19 @@
+body {
+	background-color: rgb(45, 47, 48);
+	margin: 5%;
+}
+
+.theatre {
+	border: 1px solid white;
+	width: 100%;
+}
+
+.column, .outercolumn {
+	border: 1px solid pink;
+	display: inline-block;
+}
+
+.seats {
+	border: 1px solid green;
+	display: block;
+}
