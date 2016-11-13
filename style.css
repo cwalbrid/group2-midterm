@@ -1,4 +1,8 @@
-
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
 	font-family:'Share Tech';
@@ -6,18 +10,16 @@ body {
 	margin: 5%;
 }
 
+header {
+	width: 100%;
+}
+
 h1 {
-	text-shadow:2px 2px rgb(47, 116, 127);
+	text-shadow:3px 3px rgb(47, 116, 127);
 	font-size:3em;
 	text-align:center;
     font-family:'Sonsie One';
     color:#FF6000;
-}
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 #theatre {
@@ -38,6 +40,7 @@ h1 {
  
 #screen p {
 	font-size: 1.25em;
+	padding: 12px;
 }
 
 .column, .outercolumn {
@@ -64,7 +67,7 @@ position: relative;
 	display: block;
 	width: 90%;
 	height: 100px;
-	margin: 10px auto 10px auto;
+	margin: 10px auto 20px auto;
 }
 
 .seatnumber {
@@ -73,4 +76,24 @@ position: relative;
 	text-align: center;
 	display: inline-block;
 	margin-top: 40px;
+}
+
+@media(max-width: 800px) {
+	
+	.seats {
+		height: 50px;
+	}
+	
+	.seatnumber {
+		margin-top: 12px;
+	}
+	
+}
+
+@media(max-width: 450px) {
+	
+	h1 {
+		font-size: 2em;
+	}
+	
 }
