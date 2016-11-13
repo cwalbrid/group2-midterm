@@ -78,6 +78,26 @@ position: relative;
 	margin-top: 40px;
 }
 
+.selected{
+	background-color: rgb(18, 220, 255);
+	box-shadow: 3px  3px rgb(189, 193, 201);
+	border-radius: 2px;
+	display: block;
+	width: 90%;
+	height: 100px;
+	margin: 10px auto 20px auto;
+}
+
+.reserved{
+	background-color: rgb(204, 78, 0);
+	box-shadow: 3px  3px rgb(189, 193, 201);
+	border-radius: 2px;
+	display: block;
+	width: 90%;
+	height: 100px;
+	margin: 10px auto 20px auto;
+}
+
 @media(max-width: 800px) {
 	
 	.seats {
@@ -97,3 +117,4 @@ position: relative;
 	}
 	
 }
+
