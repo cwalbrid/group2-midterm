@@ -78,6 +78,51 @@ position: relative;
 	margin-top: 40px;
 }
 
+#key {
+	height:;
+	width:25%;
+	margin-top:20px;
+	margin-bottom:20px;
+	display:-inline-block;
+	float:left;
+	border:solid white 1px;
+}
+
+#keyhead{
+	font-family:'Sonsie One';
+	text-align:center;
+	color:#FF6000;
+}
+
+.keycolor {
+	border-radius:2px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	height:30px;
+	width:60%;
+}
+
+.keytext {
+	width:100%;
+	padding:5px;
+	margin-top:10px;
+	text-align:center;
+	color:white;
+}
+
+#available{
+	background-color:rgb(47, 116, 127);
+}
+
+#unavailable{
+	background-color:rgb(204, 78, 0); 
+}
+
+#selected{
+	background-color:rgb(18, 220, 255);
+}
 @media(max-width: 800px) {
 	
 	.seats {
@@ -94,6 +139,14 @@ position: relative;
 	
 	h1 {
 		font-size: 2em;
+	}
+
+}
+
+@media(max-width: 635px){
+	
+	.keytext {
+		font-size:.65em;
 	}
 	
 }
