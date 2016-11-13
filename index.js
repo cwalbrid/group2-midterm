@@ -22,7 +22,7 @@ $('.open').on('click', function(){
 
 	//'Seat(s) Selected' field is populated with clicked seat's ID value
 	/*
-		
+		s
 	*/
 
 });
