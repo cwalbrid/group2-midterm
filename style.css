@@ -162,19 +162,54 @@ position: relative;
 		border-radius: 5px;
 		margin: 20px;
 		float: right;
-		padding: 5px;
+		padding: 10px;
 		text-align: center;
+		font-size: 1.25em;
+		color: white;
 	}
 	
 	#form h3 {
 		color: white;
 	}
 	
-
+	input {
+		padding: 3px;
+		border-radius: 5px;
+		margin: 10px auto 0px auto;
+		vertical-align: middle;
+		display: block;
+	}
+	
+	input[type="text"] {
+		width: 80%;
+	}
+	
+	#reservebutton {
+		display: block;
+		margin: 20px auto 10px auto;
+		background-color: rgb(47, 116, 127);
+		color: white;
+		font-family: 'Sonsie One';
+		padding: 10px;
+		text-shadow: 0px 1px 1px rgb(18, 220, 255);
+		box-shadow: 2px  2px rgb(189, 193, 201);
+		width: 50%
+	}
+	
+	#reservebutton:hover {
+		background-color: rgb(64, 158, 173);
+	}
+	
+	
 /* Media Query */
 
+@media(max-width: 885px) {
+	#reservebutton {
+		font-size: .5em;
+	}
+}
+
 @media(max-width: 800px) {
-	
 	.seats {
 		height: 50px;
 	}
@@ -188,6 +223,17 @@ position: relative;
 	}
 }
 
+
+@media(max-width: 635px){
+	.keytext {
+		font-size:.65em;
+	}
+	
+	#reservebutton {
+		font-size: .4em;
+	}
+}
+
 @media(max-width: 450px) {
 	
 	h1 {
@@ -198,13 +244,12 @@ position: relative;
 		left: 100px;
 	}
 	
+	#form h3 {
+		font-size: .80em;
+	}
 }
 
-@media(max-width: 635px){
-	
-	.keytext {
-		font-size:.65em;
-	}
+
 	
 }
 
