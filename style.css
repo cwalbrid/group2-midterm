@@ -18,8 +18,11 @@ h1 {
 	text-shadow:3px 3px rgb(47, 116, 127);
 	font-size:3em;
 	text-align:center;
-    font-family:'Sonsie One';
     color:#FF6000;
+}
+
+h1, h2, h3 {
+	font-family:'Sonsie One';
 }
 
 #theatre {
@@ -99,7 +102,12 @@ position: relative;
 	margin: 10px auto 20px auto;
 }
 
+#keyformcontainer {
+	width: 80%;
+	margin: auto;
+}
 
+/* Key Styling */
 #key {
 	height:;
 	width:25%;
@@ -111,7 +119,6 @@ position: relative;
 }
 
 #keyhead{
-	font-family:'Sonsie One';
 	text-align:center;
 	color:#FF6000;
 }
@@ -146,6 +153,26 @@ position: relative;
 	background-color:rgb(18, 220, 255);
 }
 
+/* Form styling */
+
+	#form {
+		width: 50%;
+		background-color: rgb(204, 78, 0); 
+		border: 4px solid rgb(47, 116, 127);
+		border-radius: 5px;
+		margin: 20px;
+		float: right;
+		padding: 5px;
+		text-align: center;
+	}
+	
+	#form h3 {
+		color: white;
+	}
+	
+
+/* Media Query */
+
 @media(max-width: 800px) {
 	
 	.seats {
@@ -156,6 +183,9 @@ position: relative;
 		margin-top: 12px;
 	}
 	
+	#form {
+		left: 200px;
+	}
 }
 
 @media(max-width: 450px) {
@@ -163,7 +193,11 @@ position: relative;
 	h1 {
 		font-size: 2em;
 	}
-
+	
+	#form {
+		left: 100px;
+	}
+	
 }
 
 @media(max-width: 635px){
