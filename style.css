@@ -186,6 +186,7 @@ position: relative;
 		text-align: center;
 		font-size: 1.25em;
 		color: white;
+		opacity: 0;
 	}
 	
 	#form h3 {
