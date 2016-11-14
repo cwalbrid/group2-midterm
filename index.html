@@ -15,6 +15,7 @@
 	<body>
 		<!--#header Box under here-->
 		<header>
+		    <img id="theatre_image" src="theatre.png"/>	
 			<h1>Woodward Avenue Cinema</h1>
 		</header>
 			
@@ -119,6 +120,8 @@
 			</div><!--end of theatre div-->
 		
 		<div id = "keyformcontainer">
+			<p id = "instructions">Please click on availble seat(s) and fill out the reservation form.</p>
+			
 			<!--color key for seat availability-->	
 			<div id="key">
 				<h3 id="keyhead">Key</h3>
@@ -129,7 +132,11 @@
 			<!--form elements below here inside div-->
 			<div id = "form">
 				<h3>Please Reserve Your Seat(s)</h3>
-			</div>
+				<label class = "title">Name: <input type="text" name="name" maxlength="30" id="name" placeholder = "Name"/></label>
+				</br>
+				<label class = "title">Selected Seat(s): <input type="text" name="seats" maxlength="30" id="seatsToBeReserved"/></label>
+				<input type="submit" name="reserve" value="Reserve Seats" id="reservebutton"/>
+			</div><!--end of form-->
 		</div> <!--end of keyformcontainer-->
 		
 	</body>
