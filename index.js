@@ -29,6 +29,11 @@ $('.seats').on('click', function(){
 		});
 	};
 
+	//Make form disappear when all seats are unselected
+	if (selectedSeats.length < 1) {
+		$('#form').css('opacity', '0');
+	}
+	
 	//'Seat(s) Selected' field is populated with clicked seat's ID value
 	$('#seatsToBeReserved').val(selectedSeats);
 
