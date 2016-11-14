@@ -44,10 +44,12 @@ $('.seats').on('click', function(){
 
 });
 	
-// An event handler for when the button w/id 'reservebutton' is clicked
+// An event handler for when the 'reservebutton' is clicked
 	$('#reservebutton').on('click', function(){
 		var name = $('#name').val();
 		var reservedSeats = $('#seatsToBeReserved').val();
+		
+		// Stores the users' name and the seat numbers to an object, which is pushed to an array
 		var userObject = {
 			name: name,
 			seat: reservedSeats
@@ -55,13 +57,16 @@ $('.seats').on('click', function(){
 		userInfo.push(userObject);
 		console.log(userInfo);
 
+		// Clears out the form fields
 		$('#name').val('');
 		$('#seatsToBeReserved').val('');
 
 		$('.selected').removeClass('selected').removeClass('seats').addClass('reserved');
 
+	// Hides the form	
 	$('#form').css('opacity', '0');
 
+	// Clears the selectedSeats array
 	selectedSeats = [];	
 
 });
