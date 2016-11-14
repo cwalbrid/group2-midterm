@@ -107,6 +107,13 @@ position: relative;
 	margin: auto;
 }
 
+#instructions {
+	text-align: center;
+	color: white;
+	font-family:'Sonsie One';
+	font-size: 1.25em;
+}
+
 /* Key Styling */
 #key {
 	height:;
