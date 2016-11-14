@@ -5,22 +5,7 @@ var selectedSeats = [];
 // An array that stores user information on form submit
 var userInfo = [];
 
-// An event handler for when the button w/id 'reservebutton' is clicked
-	$('#reservebutton').on('click', function(){
-		var name = $('#name').val();
-		var reservedSeats = $('#seatsToBeReserved').val();
-		var userObject = {
-			name: name,
-			seat: reservedSeats
-		};
-		userInfo.push(userObject);
-		console.log(userInfo);
 
-		$('#name').val('');
-		$('#seatsToBeReserved').val('');
-
-		$('.selected').removeClass('selected').removeClass('seats').addClass('reserved');
-});
 
 // A handler for when a user clicks on a seat with a class of Open or Selected
 $('.seats').on('click', function(){
@@ -59,7 +44,27 @@ $('.seats').on('click', function(){
 
 });
 	
-	
+// An event handler for when the button w/id 'reservebutton' is clicked
+	$('#reservebutton').on('click', function(){
+		var name = $('#name').val();
+		var reservedSeats = $('#seatsToBeReserved').val();
+		var userObject = {
+			name: name,
+			seat: reservedSeats
+		};
+		userInfo.push(userObject);
+		console.log(userInfo);
+
+		$('#name').val('');
+		$('#seatsToBeReserved').val('');
+
+		$('.selected').removeClass('selected').removeClass('seats').addClass('reserved');
+
+	$('#form').css('opacity', '0');
+
+	selectedSeats = [];	
+
+});
 
 
 	
