@@ -11,14 +11,15 @@ body {
 }
 
 header {
-	width: 100%;
+	width: 80%;
+	margin: auto;
 }
 
 #theatre_image {
-	width:5%;
-	display:inline-block;
-	margin-left:190px;
-
+	width: 20%;
+    display: block;
+    float: left;
+    margin: 10px;
 }
 
 h1 {
@@ -27,6 +28,9 @@ h1 {
 	font-size:3em;
 	text-align:center;
     color:#FF6000;
+	top: 20px;
+    float: right;
+    width: 75%;
 }
 
 h1, h2, h3 {
@@ -37,6 +41,7 @@ h1, h2, h3 {
 	border: 1px solid white;
 	width: 100%;
 	padding: 5px;
+	clear: both;
 }
 
 #screen {
@@ -218,9 +223,21 @@ position: relative;
 	
 /* Media Query */
 
+@media(max-width:980px) {
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
 @media(max-width: 885px) {
 	#reservebutton {
 		font-size: .5em;
+	}
+}
+
+@media(max-width:812px) {
+	h1 {
+		font-size: 2em;
 	}
 }
 
@@ -253,13 +270,25 @@ position: relative;
 		width: 100%;
 	}
 }
+@media(max-width: 655px) {
+	#theatre_image {
+		width: 35%;
+		display: block;
+		float: none;
+		margin: auto;
+	}
+
+	h1 {
+		text-shadow: 3px 3px rgb(47, 116, 127);
+		font-size: 2em;
+		text-align: center;
+		color: #FF6000;
+		float: none;
+		width: 100%; 
+	}
+}
 
 @media(max-width: 450px) {
-	
-	h1 {
-		font-size: 2em;
-	}
-	
 	#form {
 		left: 100px;
 	}
