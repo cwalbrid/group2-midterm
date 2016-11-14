@@ -228,6 +228,10 @@ position: relative;
 	#form {
 		left: 200px;
 	}
+	
+	#reservebutton {
+		width: 100%;
+	}
 }
 
 
@@ -237,7 +241,8 @@ position: relative;
 	}
 	
 	#reservebutton {
-		font-size: .4em;
+		font-size: .5em;
+		width: 100%;
 	}
 }
 
