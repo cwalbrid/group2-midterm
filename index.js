@@ -1,30 +1,41 @@
 $(document).ready(function (){
 
+// An array that stores the seat numbers that a user has selected
 var selectedSeats = [];
 
-$('.open').on('click', function(){
-	$(this).toggleClass('open selected');
-	
+// A handler for when a user clicks on a seat with a class of Open or Selected
+$('.seats').on('click', function(){
 	
 	var seatNumber = $(this).attr('id'); 
 	var seatClass = $(this).attr('class');
 	var formOpacity = $('.form').css('opacity');
 	
-	if(seatClass === 'seats selected'){
-		// console.log(seatClass);
+	// Push the seat number to our selectedSeats array
+	if(seatClass === 'seats open'){
+
 		selectedSeats.push(seatNumber);
+		alert(selectedSeats);
 
-		for(var i = 0; i < selectedSeats.length; i++){
-			fetchedSeat = selectedSeats[i]; 
-			console.log(fetchedSeat);
-		 }
-	}
-
-	//toggle visibility for form with conditional statement that accepts 'open' classes
+	// Sets form opacity to 1 if the current opacity is set to 0. This makes the form visible.
+		if(formOpacity === '0'){
+			$('.form').css('opacity', '1');
+	};	 
 	
-	if(formOpacity === '0'){
-		$('.form').css('opacity', '1');
-	}
+	//Remove seats from the selectedSeats array if they have a class of selected and are clicked again.
+	} else if(seatClass === 'seats selected'){
+		
+		selectedSeats = jQuery.grep(selectedSeats, function(e){
+			return e !== seatNumber;
+		});
+
+		alert(selectedSeats)
+	};
+
+	//Toggle seat class between 'open' and 'selected'
+	$(this).toggleClass('open selected');
+	
+
+
 	
 
 	//'Seat(s) Selected' field is populated with clicked seat's ID value
