@@ -5,8 +5,6 @@ var selectedSeats = [];
 // An array that stores user information on form submit
 var userInfo = [];
 
-
-
 // A handler for when a user clicks on a seat with a class of Open or Selected
 $('.seats').on('click', function(){
 	
@@ -16,7 +14,6 @@ $('.seats').on('click', function(){
 	
 	// Push the seat number to our selectedSeats array
 	if(seatClass === 'seats open'){
-
 		selectedSeats.push(seatNumber);
 
 	// Sets form opacity to 1 if the current opacity is set to 0. This makes the form visible.
@@ -25,22 +22,24 @@ $('.seats').on('click', function(){
 	};	 
 	
 	//Remove seats from the selectedSeats array if they have a class of selected and are clicked again.
-	} else if(seatClass === 'seats selected'){
-		
+	}
+		else if(seatClass === 'seats selected'){
 		selectedSeats = jQuery.grep(selectedSeats, function(e){
 			return e !== seatNumber;
 		});
-
-		
 	};
 
+	//Make form disappear when all seats are unselected
+	if (selectedSeats.length < 1) {
+		$('#form').css('opacity', '0');
+	}
+	
 	//'Seat(s) Selected' field is populated with clicked seat's ID value
 	$('#seatsToBeReserved').val(selectedSeats);
 
 	//Toggle seat class between 'open' and 'selected'
 	$(this).toggleClass('open selected');
 	
-
 });
 	
 // An event handler for when the 'reservebutton' is clicked
@@ -70,8 +69,6 @@ $('.seats').on('click', function(){
 
 });
 
-
-	
 
 //document.body wrapper
 });
