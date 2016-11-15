@@ -18,7 +18,6 @@ $('.seats').on('click', function(){
 	if(seatClass === 'seats open'){
 
 		selectedSeats.push(seatNumber);
-		alert(selectedSeats);
 
 	// Sets form opacity to 1 if the current opacity is set to 0. This makes the form visible.
 		if(formOpacity === '0'){
